@@ -8,6 +8,9 @@
 			# language
 			$this->load->language('design/gridbanner');
 			$data['text_heading'] = $this->language->get('text_grid_banner');
+			$data['button_save'] = $this->language->get('text_button_save');
+			$data['button_cancel'] = $this->language->get('text_button_cancel');
+			$data['cancel'] = $this->language->get('cancel');
 
 
 
@@ -65,6 +68,8 @@
 			}
 		}
 		
-		
+		public function hello(){
+			echo "test";
+		}
 	}
 ?>
