@@ -77,6 +77,7 @@ class ControllerUserApi extends Controller {
 	}
 
 	public function delete() {
+		
 		$this->load->language('user/api');
 
 		$this->document->setTitle($this->language->get('heading_title'));

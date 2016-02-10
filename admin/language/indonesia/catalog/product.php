@@ -2,8 +2,11 @@
 // Heading
 $_['heading_title']          = 'Produk'; 
 
+//tab
+$_['tab_image']          	= 'Gambar Lain'; 
+
 // Text  
-$_['text_success']           = 'Sukses Anda telah memodifikasi produk!';
+$_['text_success']           = 'Berhasil merubah data!';
 $_['text_plus']              = '+';
 $_['text_minus']             = '-';
 $_['text_default']           = 'Default';
@@ -18,11 +21,11 @@ $_['text_edit']              = 'Edit Produk';
 // Column
 $_['column_name']            = 'Nama Produk';
 $_['column_model']           = 'Model';
-$_['column_image']           = 'Gambar';
+$_['column_image']           = 'Gambar Lain';
 $_['column_price']           = 'Harga (Rupiah)';
 $_['column_quantity']        = 'Stok';
 $_['column_status']          = 'Status';
-$_['column_action']          = 'Aksi';
+$_['column_action']          = 'Edit';
 
 // Entry
 $_['entry_name']             = 'Nama Produk';
@@ -46,7 +49,7 @@ $_['entry_date_available']   = 'Tanggal Tersedia';
 $_['entry_quantity']         = 'Stok';
 $_['entry_minimum']          = 'Jumlah MinimalJumlah minimal pemesanan';
 $_['entry_stock_status']     = 'Status Persediaan Habis Status ditampilkan saat produk habis';
-$_['entry_price']            = 'Diskon (%)';
+$_['entry_price']            = 'Harga';
 $_['entry_tax_class']        = 'Kelas Pajak';
 $_['entry_points']           = 'Poin Jumlah poin yang dibutuhkan untuk membeli item ini. Jika Anda tidak ingin produk yang akan dibeli ini dengan poin biarkan 0';
 $_['entry_option_points']    = 'Poin';
@@ -55,7 +58,7 @@ $_['entry_weight_class']     = 'Satuan Berat';
 $_['entry_weight']           = 'Berat';
 $_['entry_length']           = 'Satuan Panjang';
 $_['entry_dimension']        = 'Dimensi (P x L x T)';
-$_['entry_image']            = 'Gambar';
+$_['entry_image']            = 'Gambar Utama';
 $_['entry_customer_group']   = 'Grup Pelanggan';
 $_['entry_date_start']       = 'Tanggal Mulai';
 $_['entry_date_end']         = 'Tanggal Akhir';
@@ -76,6 +79,7 @@ $_['entry_tag']          	 = 'Tag Produkdipisahkan dengan koma';
 $_['entry_reward']           = 'Poin Hadiah';
 $_['entry_layout']           = 'Tata Letak Override';
 $_['entry_profile']          = 'Profil';
+$_['entry_discount_price']   = 'Diskon(%)';
 
 $_['text_recurring_help']    = 'Recurring amounts are calculated by the frequency and cycles. For example if you use a frequency of "week" and a cycle of "2", then the user will be billed every 2 weeks. The length is the number of times the user will make a payment, set this to 0 if you want payments until they are cancelled.';
 $_['text_recurring_title']   = 'Pembayaran berkala';

@@ -315,11 +315,11 @@ $('button[id^=\'button-delete\']').on('click', function(e) {
 				$('.alert').remove();
 
 				if (json['error']) {
-					$('#content > .container-fluid').prepend('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+					$('#content > .container-fluid').prepend('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> Gagal merubah data pesanan! <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 				}
 
 				if (json['success']) {
-					$('#content > .container-fluid').prepend('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+					$('#content > .container-fluid').prepend('<div class="alert alert-success"><i class="fa fa-check-circle"></i> Berhasil merubah data pesanan! <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 				}
 			},
 			error: function(xhr, ajaxOptions, thrownError) {

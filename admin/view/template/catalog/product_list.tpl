@@ -41,7 +41,7 @@
                 <label class="control-label" for="input-model"><?php echo $entry_model; ?></label>
                 <input type="text" name="filter_model" value="<?php echo $filter_model; ?>" placeholder="<?php echo $entry_model; ?>" id="input-model" class="form-control" />
               </div> -->
-              <div class="form-group">
+              <div class="form-group hidden">
                 <label class="control-label" for="input-price"><?php echo $entry_price; ?></label>
                 <input type="text" name="filter_price" value="<?php echo $filter_price; ?>" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
               </div>
@@ -85,26 +85,26 @@
                     <a href="<?php echo $sort_name; ?>"><?php echo $column_name; ?></a>
                     <?php } ?></td>
                   <!-- <td class="text-left"><?php //if ($sort == 'p.model') { ?>
-                    <a href="<?php //echo $sort_model; ?>" class="<?php echo strtolower($order); ?>"><?php //echo $column_model; ?></a>
+                    <a href="<?php //echo $sort_model; ?>" class="<?php //echo strtolower($order); ?>"><?php //echo $column_model; ?></a>
                     <?php //} //else { ?>
                     <a href="<?php //echo $sort_model; ?>"><?php //echo $column_model; ?></a>
                     <?php //} ?></td> -->
-                  <td class="text-right"><?php if ($sort == 'p.price') { ?>
+                  <td class="text-center"><?php if ($sort == 'p.price') { ?>
                     <a href="<?php echo $sort_price; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_price; ?></a>
                     <?php } else { ?>
                     <a href="<?php echo $sort_price; ?>"><?php echo $column_price; ?></a>
                     <?php } ?></td>
-                  <td class="text-right"><?php if ($sort == 'p.quantity') { ?>
+                  <th class="text-center"><?php if ($sort == 'p.quantity') { ?>
                     <a href="<?php echo $sort_quantity; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_quantity; ?></a>
                     <?php } else { ?>
                     <a href="<?php echo $sort_quantity; ?>"><?php echo $column_quantity; ?></a>
-                    <?php } ?></td>
-                  <td class="text-left"><?php if ($sort == 'p.status') { ?>
+                    <?php } ?></th>
+                  <td class="text-center"><?php if ($sort == 'p.status') { ?>
                     <a href="<?php echo $sort_status; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_status; ?></a>
                     <?php } else { ?>
                     <a href="<?php echo $sort_status; ?>"><?php echo $column_status; ?></a>
                     <?php } ?></td>
-                  <td class="text-right"><?php echo $column_action; ?></td>
+                  <td class="text-center"><?php echo $column_action; ?></td>
                 </tr>
               </thead>
               <tbody>
@@ -124,25 +124,25 @@
                   <td class="text-left"><?php echo $product['name']; ?></td>
                   <!-- <td class="text-left"><?php //echo $product['model']; ?></td> -->
                   <td class="text-right"><?php if ($product['special']) { ?>
-                    <span style="text-decoration: line-through;">
+                    <span  class='text-danger' style="font-style:italic;text-decoration: line-through;">
                     <?php 
-                      echo "<span style='text-align:left;float:left;text-indent:20%' >Rp.</span>" . number_format($product['price'],0,'','.').',-'; 
+                      echo "<span class='text-danger' style='font-style:italic;text-align:left;float:left;text-indent:20%;text-decoration: line-through;' >Rp.</span>" . number_format($product['price'],0,'','.').',-'; 
                     ?></span><br/>
-                    <div class="text-danger"><?php echo $product['special']; ?></div>
+                    <?php  echo "<span style='text-align:left;float:left;text-indent:20%;' >Rp.</span>" . number_format($product['special'],0,'','.').',-'; ?>
                     <?php } else { ?>
                     <?php 
                       echo "<span style='text-align:left;float:left;text-indent:20%' >Rp.</span>" . number_format($product['price'],0,'','.').',-'; 
                     ?>
                     <?php } ?></td>
-                  <td class="text-right"><?php if ($product['quantity'] <= 0) { ?>
+                  <td class="text-center"><?php if ($product['quantity'] <= 0) { ?>
                     <span class="label label-warning"><?php echo $product['quantity']; ?></span>
                     <?php } elseif ($product['quantity'] <= 5) { ?>
                     <span class="label label-danger"><?php echo $product['quantity']; ?></span>
                     <?php } else { ?>
                     <span class="label label-success"><?php echo $product['quantity']; ?></span>
                     <?php } ?></td>
-                  <td class="text-left"><?php echo $product['status']; ?></td>
-                  <td class="text-right"><a href="<?php echo $product['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
+                  <td class="text-center"><?php echo $product['status']; ?></td>
+                  <td class="text-center"><a href="<?php echo $product['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
                 </tr>
                 <?php } ?>
                 <?php } else { ?>

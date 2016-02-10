@@ -3,7 +3,7 @@
 $_['heading_title']          = 'Koleksi';
 
 // Text
-$_['text_success']           = 'Sukses: Anda telah memodifikasi Koleksi!';
+$_['text_success']           = 'Berhasil merubah data koleksi!';
 $_['text_default']           = 'Default';
 $_['text_list']              = 'Daftar Koleksi';
 $_['text_add']               = 'Tambah Koleksi';
@@ -26,7 +26,7 @@ $_['entry_keyword']          = 'SEO Keyword: Jangan gunakan spasi, ganti spasi d
 $_['entry_image']            = 'Gambar';
 $_['entry_top']              = 'Kategori akan tampil di menu bar atas pada tampilan depan.';
 $_['entry_column']           = 'Kolom: Jumlah kolom yang akan digunakan untuk 3 Koleksi bawah. Hanya bekerja untuk koleksi parent.';
-$_['entry_sort_order']       = 'Sort Order:';
+$_['entry_sort_order']       = 'Urutan';
 $_['entry_status']           = 'Status';
 $_['entry_layout']           = 'Tata Letak Override:';
 $_['entry_meta_title'] 	     = 'Meta Tag Title';

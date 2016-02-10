@@ -283,7 +283,6 @@ class ModelCatalogProduct extends Model {
 
 		if ($query->num_rows) {
 			$data = $query->row;
-
 			$data['sku'] = '';
 			$data['upc'] = '';
 			$data['viewed'] = '0';

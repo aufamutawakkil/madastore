@@ -147,8 +147,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-price"><?php echo $entry_price; ?> (Rupiah) </label>
                 <div class="col-sm-10">
-                  <input type="text" name="price" value="<?php echo $price;  ?>
-                    " placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
+                  <input type="text" name="price" value="<?php echo $price;?>" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
                 </div>
               </div>
               <div class="form-group hidden">
@@ -784,7 +783,7 @@
                     <tr>
                       <td class="text-left"><?php echo $entry_customer_group; ?></td>
                      <!--  <td class="text-right"><?php //echo $entry_priority; ?></td> -->
-                      <td class="text-right"><?php echo $entry_price; ?></td>
+                      <td class="text-right"><?php echo $entry_discount_price; ?></td>
                       <td class="text-left"><?php echo $entry_date_start; ?></td>
                       <td class="text-left"><?php echo $entry_date_end; ?></td>
                       <td></td>
@@ -803,53 +802,38 @@
                           <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></option>
                           <?php } ?>
                           <?php } ?>
-                      <!--   </select></td>
-                      <td class="text-right"><input type="text" name="product_special[<?php //echo $special_row; ?>][priority]" value="<?php //echo $product_special['priority']; ?>" placeholder="<?php //echo $entry_priority; ?>" class="form-control" /></td> -->
+                     </select></td>
+                       <!--   <td class="text-right"><input type="text" name="product_special[<?php //echo $special_row; ?>][priority]" value="<?php //echo $product_special['priority']; ?>" placeholder="<?php //echo $entry_priority; ?>" class="form-control" /></td> -->
                       <?php
                          
-                          if( $product_special['price'] != 0 || $product_special['price'] != null ){
+                          if( $product_special['price'] != 0 && $product_special['price'] != null ){
                               //jika ada price, berarti price yang di tampilkan adalah hasil discount
                               //rumus x = (hasil*100)/harga //menentukan besar diskon
 
                               //rumus menentuka harga setalh di diskon
                               $discount = ($product_special['price']*100)/$price;
                               $price_after_discount = ($price*$discount)/100;
-
+                              
                               $discount = 100 - $discount;
 
                               //isi nya discoint
                               echo "
-                                <td class='text-right'><input type='text' name='discount-product_special[".$special_row."][price]' id='discount-input-special' value='".$discount."' placeholder='".$entry_price."' class='form-control' /></td>";
+                                <td class='text-right' style='padding-top:25px;'><input type='text' name='discount-product_special[".$special_row."][price]' id='discount-input-special' value='".$discount."' placeholder='".$entry_price."' class='form-control' />";
 
-                              $isProdukSpecialExist = true;
+                               echo  "<input type='text' style='opacity:0;height:0' name='product_special[".$special_row."][price]' id='input-special' value='".$product_special['price']."' placeholder='".$entry_price."' /></td>";
+                                
+                                $isProdukSpecialExist = true;
 
                           }else{
                                 //isi nya discount
-                              echo  "<td class='text-right'><input type='text' name='discount-product_special[".$special_row."][price]' id='discount-input-special' value='".$product_special['price']."' placeholder='".$entry_price."' class='form-control' /></td>";
+                              return;
                           }   
 
 
                       ?>
 
-                        <input type='hidden' name='product_special[".$special_row."][price]' value="<?=$product_special[
-                        'price']?>" class='form-control' id="input-special" />
+                        <!-- ada script tag produk spesial -->
 
-                        <!-- scipt special -->
-                        <script type="text/javascript">
-                            $(function(){
-
-                                //jika ada perbuhana dengan diskount
-                              $(document).on('keyup',"#discount-input-special",function(){
-                                  $("#input-special").val( Number($("#input-price").val() * $(this).val())/100 );
-                              })
-
-                              //jika ada perubahan dengan harga
-                              $(document).on('keyup',"#input-price",function(){
-                                  $("#input-special").val( Number($("#input-price").val() * $(this).val())/100 );
-                              })
-
-                            })
-                        </script>
 
                       <td class="text-left" style="width: 20%;"><div class="input-group date">
                           <input type="text" name="product_special[<?php echo $special_row; ?>][date_start]" value="<?php echo $product_special['date_start']; ?>" placeholder="<?php echo $entry_date_start; ?>" data-date-format="YYYY-MM-DD" class="form-control" />
@@ -861,6 +845,7 @@
                           <span class="input-group-btn">
                           <button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
                           </span></div></td>
+
                       <td class="text-left"><button type="button" onclick="delSpecial()" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
                     </tr>
                     <?php $special_row++; ?>
@@ -883,13 +868,35 @@
               </div>
             </div>
 
+
+                        <!-- scipt special -->
+                        <script type="text/javascript">
+                            $(function(){
+                                //jika ada perbuhana dengan diskount
+                              $(document).on('keyup',"#discount-input-special",function(){
+                                  var disc =  Number($("#input-price").val() * $(this).val())/100 ;
+                                  var harga = $("#input-price").val() - disc;
+                                  $("#input-special").val(harga);
+                              })
+
+                              //jika ada perubahan dengan harga
+                              $(document).on('keyup',"#input-price",function(){
+                                  var price_disc =  Number($("#input-price").val() * $("#discount-input-special").val())/100;
+                                  console.log(price_disc)
+                                  var disc = $("#input-price").val() - price_disc;
+                                  $("#input-special").val(disc);
+                              })
+
+                            })
+                        </script>
+
             <!-- images tab -->
             <div class="tab-pane" id="tab-image">
               <div class="table-responsive">
                 <table id="images" class="table table-striped table-bordered table-hover">
                   <thead>
                     <tr>
-                      <td class="text-left"><?php echo $entry_image; ?></td>
+                      <td class="text-left"><?php echo $tab_image; ?></td>
                       <td class="text-right"><?php echo $entry_sort_order; ?></td>
                       <td></td>
                     </tr>
@@ -1438,7 +1445,10 @@ function addSpecial() {
     html += '      <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo addslashes($customer_group['name']); ?></option>';
     <?php } ?>
     html += '  </select></td>';
-	html += '  <td class="text-right"><input type="text" name="product_special[' + special_row + '][price]" value="" placeholder="<?php echo $entry_price; ?>" class="form-control" /></td>';
+    html += '  <td class="text-right" style="padding-top: 25px;"><input id="discount-input-special" type="text" name="discount_product_special[' + special_row + '][price]" value="" placeholder="<?php echo $entry_discount_price; ?>" class="form-control" />';
+
+	html += '  <input type="text" style="height:0px;opacity:0" id="input-special" name="product_special[' + special_row + '][price]" value="" placeholder="<?php echo $entry_price; ?>" /></td>';
+    
     html += '  <td class="text-left" style="width: 20%;"><div class="input-group date"><input type="text" name="product_special[' + special_row + '][date_start]" value="" placeholder="<?php echo $entry_date_start; ?>" data-date-format="YYYY-MM-DD" class="form-control" /><span class="input-group-btn"><button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button></span></div></td>';
 	html += '  <td class="text-left" style="width: 20%;"><div class="input-group date"><input type="text" name="product_special[' + special_row + '][date_end]" value="" placeholder="<?php echo $entry_date_end; ?>" data-date-format="YYYY-MM-DD" class="form-control" /><span class="input-group-btn"><button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button></span></div></td>';
 	html += '  <td class="text-left"><button type="button" onclick="delSpecial()" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
