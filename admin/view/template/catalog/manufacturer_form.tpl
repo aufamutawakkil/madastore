@@ -82,7 +82,7 @@
           </div>
 
            <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-keyword"><?php echo $entry_keyword; ?></label>
+            <label class="col-sm-2 control-label" for="input-tag<?php echo $language['language_id']; ?>"><span data-toggle="tooltip" title="<?php echo $help_keyword; ?>"><?php echo $entry_keyword; ?></span></label>
             <div class="col-sm-10">
               <input type="text" name="keyword" value="<?php echo $keyword; ?>" id="input-keyword" class="form-control" />
               <?php if ($error_keyword) { ?>

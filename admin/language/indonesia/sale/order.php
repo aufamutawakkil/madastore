@@ -179,7 +179,7 @@ $_['entry_voucher']                           = 'Voucher:';
 $_['entry_reward']                            = 'Hadiah:';
 $_['entry_date_added']           			  = 'Tanggal Ditambahkan';
 $_['entry_date_modified']        			  = 'Tanggal Perubahan';
-$_['entry_order_id']             			  = 'ID Pembelian';
+$_['entry_order_id']             			  = 'ID Pesanan';
 
 // Error
 $_['error_warning']                           = 'Peringatan: Silahkan periksa form dengan seksama untuk error!';
