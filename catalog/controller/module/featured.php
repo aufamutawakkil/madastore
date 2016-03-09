@@ -28,7 +28,6 @@ class ControllerModuleFeatured extends Controller {
 			foreach ($products as $product_id) {
 				$product_info = $this->model_catalog_product->getProduct($product_id);
 
-
 				if ($product_info) {
 					if ($product_info['image']) {
 						$image = $this->model_tool_image->resize($product_info['image'], $setting['width'], $setting['height']);
@@ -42,15 +41,8 @@ class ControllerModuleFeatured extends Controller {
 						$price = false;
 					}
 
-					if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-						$price_old = $this->currency->format($this->tax->calculate($product_info['price_old'], $product_info['tax_class_id'], $this->config->get('config_tax')));
-					} else {
-						$price_old = false;
-					}
-
 					if ((float)$product_info['special']) {
-						/*$special = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));*/
-						$special = $product_info['special'];
+						$special = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
 					} else {
 						$special = false;
 					}
@@ -67,6 +59,7 @@ class ControllerModuleFeatured extends Controller {
 						$rating = false;
 					}
 
+
 					$data['products'][] = array(
 						'product_id'  => $product_info['product_id'],
 						'thumb'       => $image,
@@ -77,8 +70,7 @@ class ControllerModuleFeatured extends Controller {
 						'tax'         => $tax,
 						'rating'      => $rating,
 						'href'        => $this->url->link('product/product', 'product_id=' . $product_info['product_id']),
-						'discount' => $product_info['discount'],
-						'price_old' => $price_old
+						'discount' 	=> $product_info['discount']
 						
 					);
 				}

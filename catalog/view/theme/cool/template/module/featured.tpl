@@ -11,7 +11,7 @@
       
       $isSpecial =false;
       if( $product['special'] ){
-        echo "<div class='sign-discount' >".$product['special']."%</div>";
+        echo "<div class='sign-discount' >".$product['discount']."%</div>";
         $isSpecial = true;
       }
       ?>
@@ -33,9 +33,9 @@
          <?php if ($product['price']) { ?>
         <p class="price">
           <?php if (!$isSpecial) { ?>
-          <?php echo $product['price_old']; ?>
+          <?php echo $product['price']; ?>
           <?php } else { ?>
-          <span class="price-new"><?php echo $product['price']; ?></span> <span class="price-old"><?php echo $product['price_old']; ?></span>
+          <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
           <?php } ?>
           <?php if ($product['tax']) { ?>
           <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
