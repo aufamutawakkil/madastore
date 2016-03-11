@@ -1,22 +1,22 @@
 <?php
 // Heading
-$_['heading_title']     = 'Product Comparison';
+$_['heading_title']     = 'Perbandingan Produk';
 
 // Text
-$_['text_product']      = 'Product Details';
-$_['text_name']         = 'Product';
-$_['text_image']        = 'Image';
-$_['text_price']        = 'Price';
+$_['text_product']      = 'Produk Detail';
+$_['text_name']         = 'Produk';
+$_['text_image']        = 'Gambar';
+$_['text_price']        = 'Harga';
 $_['text_model']        = 'Model';
 $_['text_manufacturer'] = 'Brand';
-$_['text_availability'] = 'Availability';
-$_['text_instock']      = 'In Stock';
+$_['text_availability'] = 'Ketersediaan';
+$_['text_instock']      = 'Tersedia';
 $_['text_rating']       = 'Rating';
-$_['text_reviews']      = 'Based on %s reviews.';
-$_['text_summary']      = 'Summary';
-$_['text_weight']       = 'Weight';
+$_['text_reviews']      = 'Berdasar %s reviews.';
+$_['text_summary']      = 'Kesimpulkan';
+$_['text_weight']       = 'Berat';
 $_['text_dimension']    = 'Dimensions (L x W x H)';
-$_['text_compare']      = 'Product Compare (%s)';
-$_['text_success']      = 'Success: You have added <a href="%s">%s</a> to your <a href="%s">product comparison</a>!';
-$_['text_remove']       = 'Success: You have modified your product comparison!';
-$_['text_empty']        = 'You have not chosen any products to compare.';
+$_['text_compare']      = 'Perbandingan product (%s)';
+$_['text_success']      = 'Berhasil: Anda telah menambahkan <a href="%s">%s</a> ke <a href="%s">produk perbandingan</a>!';
+$_['text_remove']       = 'Berhasil: Anda telah mengupdate data produk perbandingan!';
+$_['text_empty']        = 'Anda belum memilih produk untuk di bandingkan';

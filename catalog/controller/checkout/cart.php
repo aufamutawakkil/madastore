@@ -1,6 +1,6 @@
 <?php
 class ControllerCheckoutCart extends Controller {
-	/*public function index() {
+	public function index() {
 		$this->load->language('checkout/cart');
 
 		$this->document->setTitle($this->language->get('heading_title'));
@@ -283,7 +283,7 @@ class ControllerCheckoutCart extends Controller {
 				$this->response->setOutput($this->load->view('default/template/error/not_found.tpl', $data));
 			}
 		}
-	}*/
+	}
 
 	public function add() {
 		$this->load->language('checkout/cart');
@@ -396,7 +396,6 @@ class ControllerCheckoutCart extends Controller {
 
 				$json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total));
 				$j = json_encode($json['total']);
-				var_dump($j);die();
 
 			} else {
 				$json['redirect'] = str_replace('&amp;', '&', $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']));

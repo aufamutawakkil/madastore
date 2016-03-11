@@ -1567,3 +1567,4 @@
 2016-03-09 6:45:09 - PHP Notice:  Undefined index: price_old in C:\xampp\htdocs\tooko\catalog\view\theme\cool\template\module\featured.tpl on line 36
 2016-03-09 6:45:09 - PHP Notice:  Undefined index: price_old in C:\xampp\htdocs\tooko\catalog\view\theme\cool\template\module\featured.tpl on line 36
 2016-03-09 6:45:09 - PHP Notice:  Undefined index: price_old in C:\xampp\htdocs\tooko\catalog\view\theme\cool\template\module\featured.tpl on line 36
+2016-03-09 16:21:34 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\tooko\system\library\mail.php on line 164
