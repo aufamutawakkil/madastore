@@ -90,7 +90,7 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript"><!--
+  <script type="text/javascript">
 var image_row = <?php echo $image_row; ?>;
 
 function addImage() {
@@ -109,16 +109,16 @@ function addImage() {
 	html += '</tr>';
 	
 	$('#images tbody').append(html);
-	
+
 	image_row++;
 }
-//--></script>
-<script type="text/javascript">
-  $(function(){
-      $(document).on('keyup',".judul",function(){
-          $(this).parent().next().children("input").val( $(this).val() );
-      });
-  })
+
+$(function(){
+    $(document).on('keyup',".judul",function(){
+        $(this).parent().next().children("input").val( $(this).val() );
+    });
+})
+
 </script>
 </div>
 <?php echo $footer; ?>

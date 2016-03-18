@@ -4,7 +4,6 @@ class ModelExtensionModule extends Model {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "module WHERE module_id = '" . (int)$module_id . "'");
 		
 		if ($query->row) {
-			//echo $query->row['setting'];die();
 			return json_decode($query->row['setting'], true);
 		} else {
 			return array();	

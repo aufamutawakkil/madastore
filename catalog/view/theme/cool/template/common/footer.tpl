@@ -39,7 +39,7 @@
       </div>
     </div>
     <hr>
-    <p style='color:#651E3C'><?php echo $powered; ?></p>
+    <p style='color:#6F6F6F !important'><?php echo $powered; ?></p>
   </div>
 </footer>
 

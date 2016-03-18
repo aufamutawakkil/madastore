@@ -59,7 +59,6 @@ class ControllerModuleFeatured extends Controller {
 						$rating = false;
 					}
 
-
 					$data['products'][] = array(
 						'product_id'  => $product_info['product_id'],
 						'thumb'       => $image,
