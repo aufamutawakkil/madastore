@@ -31,6 +31,13 @@ class ControllerCommonLogin extends Controller {
 
 		$data['button_login'] = $this->language->get('button_login');
 
+		
+		if ($this->request->server['HTTPS']) {
+			$data['base'] = HTTPS_SERVER;
+		} else {
+			$data['base'] = HTTP_SERVER;
+		}
+
 		if ((isset($this->session->data['token']) && !isset($this->request->get['token'])) || ((isset($this->request->get['token']) && (isset($this->session->data['token']) && ($this->request->get['token'] != $this->session->data['token']))))) {
 			$this->error['warning'] = $this->language->get('error_token');
 		}
@@ -86,7 +93,7 @@ class ControllerCommonLogin extends Controller {
 			$data['forgotten'] = '';
 		}
 
-		$data['header'] = $this->load->controller('common/header');
+		$data['header'] = $this->load->controller('common/header_login');
 		$data['footer'] = $this->load->controller('common/footer');
 
 		$this->response->setOutput($this->load->view('common/login.tpl', $data));

@@ -6,6 +6,12 @@ class ControllerCommonColumnLeft extends Controller {
 			$data['menu'] = $this->load->controller('common/menu');
 			$data['stats'] = $this->load->controller('common/stats');
 
+			if ($this->request->server['HTTPS']) {
+				$data['base'] = HTTPS_SERVER;
+			} else {
+				$data['base'] = HTTP_SERVER;
+			}
+
 			return $this->load->view('common/column_left.tpl', $data);
 		}
 	}

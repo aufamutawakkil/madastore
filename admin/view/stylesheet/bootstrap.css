@@ -1032,10 +1032,10 @@ input, button, select, textarea {
   line-height: inherit; }
 
 a {
-  color: #E66C0E;
+  color: #AD0842;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #14628c;
+    color: #BB5377;
     text-decoration: underline; }
   a:focus {
     outline: thin dotted;
@@ -1931,6 +1931,16 @@ th {
   width: 100%;
   max-width: 100%;
   margin-bottom: 17px; }
+  .table > thead{
+    background: #333;
+    color:#eee;
+  }
+    .table > thead > tr > td > a{
+      color: #eee;
+    }
+    .table > thead > tr > th > a{
+      color: #eee;
+    }
   .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
     padding: 8px;
     line-height: 1.42857;
@@ -1952,7 +1962,7 @@ th {
 .table-bordered {
   border: 1px solid #ddd; }
   .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
-    border: 1px solid #ddd; }
+    border: 1px solid #d; }
   .table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
     border-bottom-width: 2px; }
 
@@ -2399,7 +2409,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
       padding-top: 5px;
       font-size: 11px; } }
 
-.btn {
+/*.btn {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -2418,7 +2428,55 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; 
-outline: none !important;}
+outline: none !important;}*/
+.btn{
+      fill: #FFF;
+    color: #FFF;
+    border: solid 1px #D57230;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1), inset 0 1px rgba(255,255,255,0.35);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1), inset 0 1px rgba(255,255,255,0.35);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1), inset 0 1px rgba(255,255,255,0.35);
+    background: #ee7d32;
+    background: -webkit-linear-gradient(top, #FF9833, #EE7D32);
+    background: -o-linear-gradient(top, #FF9833, #EE7D32);
+    background: -moz-linear-gradient(top, #FF9833, #EE7D32);
+    background: -ms-linear-gradient(top, #FF9833, #EE7D32);
+    background: -linear-gradient(top, #FF9833, #EE7D32);
+    font-size: 11px;
+    font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
+    font-weight: bold;
+    padding: 4px 10px 5px;
+    cursor: pointer;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    color: #666666;
+    border: 1px solid #D8D8D8;
+    background: #f4f4f4;
+    background: -o-linear-gradient(top, #f8f8f8, #efefef);
+    background: -moz-linear-gradient(top, #f8f8f8, #efefef);
+    background: -ms-linear-gradient(top, #f8f8f8, #efefef);
+    background: -linear-gradient(top, #f8f8f8, #efefef);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.05), inset 0 1px rgba(255,255,255,0.75);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05), inset 0 1px rgba(255,255,255,0.75);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05), inset 0 1px rgba(255,255,255,0.75);
+    text-shadow: 0 1px 0 rgba(255,255,255,.65);
+    outline-style: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
   .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
@@ -2472,10 +2530,10 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-primary {
   color: #fff;
-  /*background-color: #1e91cf;
-  border-color: #1978ab;*/
-      background-color: #f38733;
-    border-color: #e66c0e; }
+  background-color: #1e91cf;
+  border-color: #1978ab;
+      /*background-color: #f38733;
+    border-color: #e66c0e;*/ }
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
     /*background-color: #1872a2;

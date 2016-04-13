@@ -1587,3 +1587,26 @@
 2016-03-13 5:11:04 - PHP Notice:  Undefined index: hFref in C:\xampp\htdocs\tooko\admin\view\template\catalog\product_form.tpl on line 12
 2016-03-13 5:18:22 - PHP Notice:  Undefined index: href in C:\xampp\htdocs\tooko\admin\view\template\design\gridbanner.tpl on line 50
 2016-03-13 5:18:22 - PHP Notice:  Undefined index: href in C:\xampp\htdocs\tooko\admin\view\template\design\gridbanner.tpl on line 50
+2016-03-28 21:48:38 - PHP Notice:  Error: Could not load template /var/www/html/tooko/catalog/view/theme//var/www/html/tooko/catalog/view/theme/cool/template/common/header_demo.tpl! in /var/www/html/tooko/system/storage/modification/system/engine/loader.php on line 86
+2016-04-09 23:30:26 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-10 16:21:41 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-11 3:11:58 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-11 3:15:18 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-12 12:17:20 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-12 12:21:33 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-12 12:22:25 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-12 12:22:30 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-12 12:22:37 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-12 12:23:26 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-12 12:24:05 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-12 12:24:42 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-12 12:26:16 - PHP Notice:  Undefined variable: header_login in /var/www/html/tooko/admin/view/template/common/login.tpl on line 1
+2016-04-12 12:26:16 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-12 12:28:42 - PHP Notice:  Error: Could not load template /var/www/html/tooko/admin/view/template/common/header_login.tpl! in /var/www/html/tooko/system/storage/modification/system/engine/loader.php on line 86
+2016-04-12 12:31:16 - PHP Notice:  Undefined variable: method in /var/www/html/tooko/system/storage/modification/system/engine/loader.php on line 29
+2016-04-12 12:33:00 - PHP Notice:  Error: Could not load template /var/www/html/tooko/admin/view/template/common/header_login.tpl! in /var/www/html/tooko/system/storage/modification/system/engine/loader.php on line 88
+2016-04-12 12:34:39 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-12 12:35:58 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/login.tpl on line 9
+2016-04-12 14:50:40 - PHP Notice:  Undefined variable: text_logout in /var/www/html/tooko/admin/view/template/common/menu.tpl on line 212
+2016-04-13 3:08:41 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/column_left.tpl on line 2
+2016-04-13 3:09:41 - PHP Notice:  Undefined variable: base in /var/www/html/tooko/admin/view/template/common/column_left.tpl on line 2

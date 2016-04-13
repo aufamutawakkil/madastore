@@ -14,6 +14,7 @@ final class Loader {
 		// Break apart the route
 		while ($parts) {
 			$file = DIR_APPLICATION . 'controller/' . implode('/', $parts) . '.php';
+
 			$class = 'Controller' . preg_replace('/[^a-zA-Z0-9]/', '', implode('/', $parts));
 
 			if (is_file($file)) {
@@ -24,6 +25,7 @@ final class Loader {
 				$method = array_pop($parts);
 			}
 		}
+
 
 		$controller = new $class($this->registry);
 

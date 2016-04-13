@@ -22,6 +22,18 @@ function getURLVar(key) {
 	}
 }
 
+function getBaseUrl(){
+	var pathArray = document.URL.split( '/' );
+	var protocol = pathArray[0];
+	var host = pathArray[2];
+	var host2 = pathArray[3];
+	if( host == 'localhost' )
+		var url 	= protocol + '//' + host + '/' + host2 + '/';
+	else var url 	= protocol + '//' + host + '/';
+
+	return url;
+}
+
 $(document).ready(function() {
 	// Highlight any found errors
 	$('.text-danger').each(function() {

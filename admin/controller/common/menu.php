@@ -110,6 +110,9 @@ class ControllerCommonMenu extends Controller {
 		$data['text_openbay_report_price'] = $this->language->get('text_openbay_report_price');
 		$data['text_openbay_order_import'] = $this->language->get('text_openbay_order_import');
 
+		$this->load->language('common/header');
+		$data['text_logout'] = $this->language->get('text_logout');
+
 		$data['analytics'] = $this->url->link('extension/analytics', 'token=' . $this->session->data['token'], 'SSL');
 		$data['home'] = $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL');
 		$data['affiliate'] = $this->url->link('marketing/affiliate', 'token=' . $this->session->data['token'], 'SSL');
@@ -180,6 +183,8 @@ class ControllerCommonMenu extends Controller {
 		$data['shipping'] = $this->url->link('extension/shipping', 'token=' . $this->session->data['token'], 'SSL');
 
 		$data['setting'] = $this->url->link('setting/setting', 'token=' . $this->session->data['token'], 'SSL');
+		
+		$data['logout'] = $this->url->link('common/logout', 'token=' . $this->session->data['token'], 'SSL');
 
 		//edit
 		//$data['setting'] = $this->url->link('setting/store', 'token=' . $this->session->data['token'], 'SSL');

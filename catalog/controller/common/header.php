@@ -24,6 +24,13 @@ class ControllerCommonHeader extends Controller {
 			$this->document->addLink($server . 'image/' . $this->config->get('config_icon'), 'icon');
 		}
 
+		# add ex style 
+		$this->document->addStyle('catalog/view/theme/'.$this->config->get('config_template').'/stylesheet/stylesheet.css');
+		$this->document->addStyle('catalog/view/theme/'.$this->config->get('config_template').'/stylesheet/header_demo.css');
+
+		# add ex script
+		
+
 		$data['title'] = $this->document->getTitle();
 
 		$data['base'] = $server;
@@ -158,6 +165,9 @@ class ControllerCommonHeader extends Controller {
 		} else {
 			$data['class'] = 'common-home';
 		}
+
+		//	For header demos
+		$data['header_demo'] = $this->load->view($this->config->get('config_template' ) . '/template/common/header_demo.tpl');
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/header.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/common/header.tpl', $data);

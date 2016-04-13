@@ -8,18 +8,18 @@ define('HTTPS_SERVER', 'http://localhost/tooko/admin/');
 define('HTTPS_CATALOG', 'http://localhost/tooko/');
 
 // DIR
-define('DIR_APPLICATION', 'C:/xampp/htdocs/tooko/admin/');
-define('DIR_SYSTEM', 'C:/xampp/htdocs/tooko/system/');
-define('DIR_LANGUAGE', 'C:/xampp/htdocs/tooko/admin/language/');
-define('DIR_TEMPLATE', 'C:/xampp/htdocs/tooko/admin/view/template/');
-define('DIR_CONFIG', 'C:/xampp/htdocs/tooko/system/config/');
-define('DIR_IMAGE', 'C:/xampp/htdocs/tooko/image/');
-define('DIR_CACHE', 'C:/xampp/htdocs/tooko/system/storage/cache/');
-define('DIR_DOWNLOAD', 'C:/xampp/htdocs/tooko/system/storage/download/');
-define('DIR_LOGS', 'C:/xampp/htdocs/tooko/system/storage/logs/');
-define('DIR_MODIFICATION', 'C:/xampp/htdocs/tooko/system/storage/modification/');
-define('DIR_UPLOAD', 'C:/xampp/htdocs/tooko/system/storage/upload/');
-define('DIR_CATALOG', 'C:/xampp/htdocs/tooko/catalog/');
+define('DIR_APPLICATION', '/var/www/html/tooko/admin/');
+define('DIR_SYSTEM', '/var/www/html/tooko/system/');
+define('DIR_LANGUAGE', '/var/www/html/tooko/admin/language/');
+define('DIR_TEMPLATE', '/var/www/html/tooko/admin/view/template/');
+define('DIR_CONFIG', '/var/www/html/tooko/system/config/');
+define('DIR_IMAGE', '/var/www/html/tooko/image/');
+define('DIR_CACHE', '/var/www/html/tooko/system/storage/cache/');
+define('DIR_DOWNLOAD', '/var/www/html/tooko/system/storage/download/');
+define('DIR_LOGS', '/var/www/html/tooko/system/storage/logs/');
+define('DIR_MODIFICATION', '/var/www/html/tooko/system/storage/modification/');
+define('DIR_UPLOAD', '/var/www/html/tooko/system/storage/upload/');
+define('DIR_CATALOG', '/var/www/html/tooko/catalog/');
 
 // DB
 define('DB_DRIVER', 'mysqli');

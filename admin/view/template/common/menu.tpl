@@ -207,5 +207,7 @@
         </ul>
       </li> -->
     </ul>
+
   </li>
+  <li id="logout"><a href="<?php echo $logout; ?>"><i class="fa fa-sign-out fa-lg"></i> <span><?php echo $text_logout; ?></span></a></li>
 </ul>
